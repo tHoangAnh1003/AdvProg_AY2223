@@ -66,7 +66,7 @@ map<char, int> countOccurrences(const vector<string>& candidateWords)
 {
     map<char, int> answer;
     //Write your code here
-    for (auto words : cadidateWords) {
+    for (string words : candidateWords) {
         for (char ch : words) 
             answer[ch] += 1;
     }
@@ -89,7 +89,7 @@ char findMostFrequentChar(const map<char, int>& occurrences, const set<char>& se
 
     for (const auto& it : occurrences) {
         char word = it.first;
-        int fre = occurrences[it];
+        int fre = occurrences[it.first];
         if (selectedChars.find(word) == selectedChars.end()) {
             if (fre > maxFre) {
                 maxFre = fre;
