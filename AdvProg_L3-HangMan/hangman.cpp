@@ -99,7 +99,7 @@ char getInputCharacter() {
     Returns:
         void
 ***/
-void updateSecretWord(const char ch, const string& word, string& secretWord)
+void updateSecretWord(string& secretWord, const char ch, const string& word)
 {
     // TODO: Update the secret word if the character ch is in the answer word.
     int n = word.length();
@@ -156,7 +156,7 @@ void processData(const char ch, const string& word,
             update incorrectChars: call updateEnteredChars() function
     ***/
     if (word.find(ch) != string::npos) {
-        updateSecretWord(ch, word, secretWord);
+        updateSecretWord(secretWord, ch, word);
         updateEnteredChars(ch, correctChars);
     } 
     else {
