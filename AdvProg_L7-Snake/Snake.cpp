@@ -172,7 +172,6 @@ void Snake::move(Direction direction)
     } else {
     	game.snakeLeave(tail->position);
         /* YOUR CODE HERE */
-	    game.snakeLeave(tail->position);
         slideTo(newPosition); 
     }
 }
