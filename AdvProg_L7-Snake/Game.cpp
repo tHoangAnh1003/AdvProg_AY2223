@@ -52,11 +52,6 @@ Game::~Game()
 
 void Game::snakeMoveTo(Position pos) {
 	//  START CODE HERE
-	//
-	//
-	//
-	//
-	// END CODE HERE
 	switch (getCellType(pos))
 	{
 	case CELL_SNAKE:
@@ -72,6 +67,7 @@ void Game::snakeMoveTo(Position pos) {
 		snake.slideTo(pos);
 		break;
 	}
+	// END CODE HERE
 }
 
 
@@ -89,11 +85,8 @@ void Game::snakeLeave(Position position)
 {
 	// Suggestion: use setCellType() method in Game class
 	// START CODE HERE
-	//  
-	//
-	//
-	// END CODE HERE
 	setCellType(position, CELL_EMPTY);
+	// END CODE HERE
 }
 
 
@@ -218,11 +211,11 @@ void Game::setCellType(Position pos, CellType cellType)
 	// Suggestion: use pos.isInsideBox(...) in Position class
 	//
 	// START CODE HERE
-	//  
-	// END CODE HERE'if (pos.isInsideBox(0, 0, width, height))
+	if (pos.isInsideBox(0, 0, width, height))
 	{
 		squares[pos.y][pos.x] = cellType;
 	}
+	// END CODE HERE
 }
 
 
@@ -258,4 +251,3 @@ int Game::getHeight(){
 Snake Game::getSnake(){
 	return snake;
 }
-
